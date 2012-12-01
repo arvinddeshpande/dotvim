@@ -1,5 +1,5 @@
 Installation
-    git clone https:://github.com/arvinddeshpande.git ~/.vim
+    git clone https:://github.com/arvinddeshpande/dotvim.git ~/.vim
 
 Create Symlinks
 
