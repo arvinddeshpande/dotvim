@@ -6,4 +6,4 @@
 	url = https://github.com/majutsushi/tagbar.git
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
+	url = http://repo.or.cz/w/vcscommand.git
