@@ -153,3 +153,5 @@ endfunction
 
 autocmd BufNewFile,BufRead *.inc  set filetype=perl
 autocmd BufNewFile,BufRead *.html set filetype=perl
+
+command Status echo "All systems are GO!"
