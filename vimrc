@@ -1,6 +1,10 @@
 ""Steve's vimrc (Modified from the original Mandrake vimrc)
 "Steve <lonetwin@yahoo.com>
 
+"Addint pathogen to keep plugins in sync.
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 "Turn syntax hilighting on.
 syntax on
 
