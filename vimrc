@@ -49,8 +49,10 @@ let g:sqlplus_db = "/@homer"
 let g:sqlplus_path = "/mesa/oracle/current/bin/sqlplus "
 
 "Terminal for 80 char ? so vim can play till 79 char.
-set textwidth=79
+"set textwidth=79
 "set wrap
+" Following works only on vim > 7.3
+match ErrorMsg /\%>80v.\+/
 
 " This is mouse enable stuff mouse support for console.
 " And this works on Solaris too when Terminal used is DTTERM and not Xterm

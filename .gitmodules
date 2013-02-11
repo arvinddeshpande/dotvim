@@ -7,3 +7,6 @@
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
 	url = http://repo.or.cz/w/vcscommand.git
+[submodule "bundle/dwm"]
+	path = bundle/dwm
+	url = https://github.com/spolu/dwm.vim.git
