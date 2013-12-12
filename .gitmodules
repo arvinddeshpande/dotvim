@@ -13,3 +13,9 @@
 [submodule "unite.vim"]
 	path = unite.vim
 	url = https://github.com/Shougo/unite.vim
+[submodule "bundle/Unite"]
+	path = bundle/Unite
+	url = https://github.com/Shougo/unite.vim
+[submodule "bundle/unite.vim"]
+	path = bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim
