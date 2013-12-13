@@ -2,7 +2,8 @@
 "Steve <lonetwin@yahoo.com>
 
 "Addint pathogen to keep plugins in sync.
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 
 "Turn syntax hilighting on.
