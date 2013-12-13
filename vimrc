@@ -34,6 +34,8 @@ map <F5> :bp<C-M>
 map <F6> :bn<C-M>
 map <F7> :bd<C-M>
 
+set number
+
 "Helpers for the tagbar plugin
 nmap <F12> :TagbarToggle<CR>
 
@@ -45,8 +47,6 @@ let g:tagbar_left = 1
 " Somehow I am confident that I will be able to make it work than the emacs
 " one.
 let g:sqlplus_userid = ''
-let g:sqlplus_password = ''
-let g:sqlplus_db = "/@homer"
 let g:sqlplus_path = "/mesa/oracle/current/bin/sqlplus "
 
 "Terminal for 80 char ? so vim can play till 79 char.
@@ -62,6 +62,9 @@ match ErrorMsg /\%>80v.\+/
 "  set ttymouse=xterm
 "endif
 
+" create the tmp directory if one doesn't exist.
+silent !mkdir ~/.vim_backup > /dev/null 2>&1
+
 set autoindent
 set smartindent
 set tabstop=2                   " Tabs (ASCII 0x09) are always 8 characters!!!
@@ -75,7 +78,7 @@ set showmatch                   " show matching parens/brackets
 set joinspaces                  " insert 2 spaces after a period when joining lines
 set history=50                  " Keep command history
 set backup                      " Keep backup of files
-set backupdir=~/tmp/            " where to keep 'em
+set backupdir=~/.vim_backup/    " where to keep 'em
 set dictionary=/usr/share/dict/words " For completion
 set noinfercase                 " Don't infer case from the pattern being
                                 " typed while searching.  
@@ -85,6 +88,7 @@ set warn                        " Give a warning message when a shell command
 set modeline                    " Set the 'modeline' options if they are defined
 set pastetoggle=<F2>            " Mapping to take care of unsetting ai and
                                 " smartindent when pasting text.
+set foldcolumn=1                " This gives 2 character wide left margin.
 
 
 " Make the up and down movements move by "display" lines:
@@ -160,3 +164,7 @@ endfunction
 
 autocmd BufNewFile,BufRead *.inc  set filetype=perl
 autocmd BufNewFile,BufRead *.html set filetype=perl
+
+" I like my StatusLine to be BLUE with White Text. Not tested with gVim
+highlight StatusLine   term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=White ctermfg=DarkBlue
+highlight StatusLineNC term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=Black ctermfg=Green
