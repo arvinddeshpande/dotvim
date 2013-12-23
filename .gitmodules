@@ -22,3 +22,6 @@
 [submodule "bundle/vimshell.vim"]
 	path = bundle/vimshell.vim
 	url = https://github.com/Shougo/vimshell.vim
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
