@@ -19,3 +19,6 @@
 [submodule "vimshell.vim"]
 	path = bundle/vimshell.vim
 	url = https://github.com/Shougo/vimshell.vim
+[submodule "bundle/vimshell.vim"]
+	path = bundle/vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim
