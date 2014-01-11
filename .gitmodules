@@ -16,3 +16,6 @@
 [submodule "bundle/vim-vinegar"]
 	path = bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "bundle/vcscommand"]
+	path = bundle/vcscommand
+	url = https://github.com/vim-scripts/vcscommand.vim.git
