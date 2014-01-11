@@ -187,4 +187,7 @@ function! s:unite_settings()
   " Enable navigation with control-j and control-k in insert mode
   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
+  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+  imap <silent><buffer><expr> <C-x> unite#do_action('split')
 endfunction
