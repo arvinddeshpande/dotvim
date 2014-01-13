@@ -166,8 +166,11 @@ autocmd BufNewFile,BufRead *.inc  set filetype=perl
 autocmd BufNewFile,BufRead *.html set filetype=perl
 
 " I like my StatusLine to be BLUE with White Text. Not tested with gVim
-highlight StatusLine   term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=White ctermfg=DarkBlue
-highlight StatusLineNC term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=Black ctermfg=Green
+" highlight StatusLine   term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=White ctermfg=DarkBlue
+" highlight StatusLineNC term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=Black ctermfg=Green
+
+" Powerline configuration solarized scheme
+let g:Powerline_theme = 'solarized256'
 
 " Unite : http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
 let g:unite_source_history_yank_enable = 1
