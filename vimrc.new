@@ -1,7 +1,7 @@
 ""Steve's vimrc (Modified from the original Mandrake vimrc)
 "Steve <lonetwin@yahoo.com>
 
-"Addint pathogen to keep plugins in sync.
+"Adding pathogen to keep plugins in sync.
 "call pathogen#runtime_append_all_bundles()
 call pathogen#incubate()
 call pathogen#helptags()
@@ -22,6 +22,7 @@ set rulerformat=%50(%-30(%f%)\ %l,%c%V\ %p%%%)
 set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
 "Always show the status line even when single file's open
 set laststatus=2
+let g:Powerline_colorscheme = 'solarized256'
 
 "Show (partial) command in status line.
 set showcmd
@@ -62,6 +63,9 @@ match ErrorMsg /\%>80v.\+/
 "  set ttymouse=xterm
 "endif
 
+" create the tmp directory if one doesn't exist.
+silent !mkdir ~/.vim_backup > /dev/null 2>&1
+
 set autoindent
 set smartindent
 set tabstop=2                   " Tabs (ASCII 0x09) are always 8 characters!!!
@@ -89,10 +93,15 @@ set foldcolumn=1                " This gives 2 character wide left margin.
 
 
 " Make the up and down movements move by "display" lines:
-map j      gj
-map k      gk
-map <Down> gj
-map <Up>   gk
+" Under tmux VIM acts weird on consecutive sequence of ESC+arrow key.
+" I have a habit of go to vim command mode and type an arrow to where I want to be.
+" Sometimes it deletes several lines, sometimes it goes backward. ESC+arrow also
+" seem to put VIM in INSERT mode for some reason. Following 4 lines solve my problem.
+
+nnoremap    3D   h
+nnoremap    3C   l
+nnoremap    3A   k
+nnoremap    3B   j
 
 " Cycle between windows and make active window full size
 map <C-N> <C-W>w<C-W>_
@@ -124,8 +133,7 @@ endif
         return "\<C-n>"
     endif
 endfunction
-
-" Intelligent tab completion
+"" Intelligent tab completion
 inoremap <silent> <Tab> <C-r>=<SID>InsertTabWrapper(1)<CR>
 inoremap <silent> <S-Tab> <C-r>=<SID>InsertTabWrapper(-1)<CR>
 
@@ -163,9 +171,8 @@ autocmd BufNewFile,BufRead *.inc  set filetype=perl
 autocmd BufNewFile,BufRead *.html set filetype=perl
 
 " I like my StatusLine to be BLUE with White Text. Not tested with gVim
-highlight StatusLine   term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=White ctermfg=DarkBlue
-highlight StatusLineNC term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=Black ctermfg=Green
-
+"highlight StatusLine   term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=White ctermfg=DarkBlue
+"highlight StatusLineNC term=bold,reverse cterm=bold,reverse gui=bold guifg=Red guibg=Red ctermbg=Black ctermfg=Green
 
 " Unite Plugin
 let g:unite_source_history_yank_enable = 1
@@ -188,4 +195,10 @@ function! s:unite_settings()
   " Enable navigation with control-j and control-k in insert mode
   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
+  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+  imap <silent><buffer><expr> <C-x> unite#do_action('split')
+
+  "  nmap <buffer> <ESC> <Plug>(unite_exit)
 endfunction
+
