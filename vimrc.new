@@ -64,7 +64,7 @@ match ErrorMsg /\%>80v.\+/
 "endif
 
 " create the tmp directory if one doesn't exist.
-silent !mkdir ~/.vim_backup > /dev/null 2>&1
+silent !mkdir ~/.vimbkup > /dev/null 2>&1
 
 set autoindent
 set smartindent
@@ -202,3 +202,6 @@ function! s:unite_settings()
   "  nmap <buffer> <ESC> <Plug>(unite_exit)
 endfunction
 
+
+" include denite mappings.
+source $HOME/.vim/denite.vim

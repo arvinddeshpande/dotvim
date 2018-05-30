@@ -28,6 +28,12 @@
 [submodule "bundle/unite"]
 	path = bundle/unite
 	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/denite.nvim"]
+	path = bundle/denite.nvim
+	url = https://github.com/Shougo/denite.nvim.git
 [submodule "bundle/neomru"]
 	path = bundle/neomru
 	url = https://github.com/Shougo/neomru.vim
+[submodule "bundle/denite-extra.vim"]
+	path = bundle/denite-extra.vim
+	url = https://github.com/neoclide/denite-extra.git
