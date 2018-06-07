@@ -1,6 +1,6 @@
 " denite
 
-if has('nvim')
+if has('python') || has('python3')
   " reset 50% winheight on window resize
   augroup deniteresize
     autocmd!
