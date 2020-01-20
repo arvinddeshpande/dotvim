@@ -79,7 +79,7 @@ set showmatch                   " show matching parens/brackets
 set joinspaces                  " insert 2 spaces after a period when joining lines
 set history=50                  " Keep command history
 set backup                      " Keep backup of files
-set backupdir=~/.vimbkup/            " where to keep 'em
+set backupdir=~/.vim_backup/    " where to keep 'em
 set dictionary=/usr/share/dict/words " For completion
 set noinfercase                 " Don't infer case from the pattern being
                                 " typed while searching.  
