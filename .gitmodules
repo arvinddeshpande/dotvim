@@ -24,7 +24,7 @@
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = https://tpope.io/vim/fugitive.git
 [submodule "bundle/unite"]
 	path = bundle/unite
 	url = https://github.com/Shougo/unite.vim.git
