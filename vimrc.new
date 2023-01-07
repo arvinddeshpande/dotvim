@@ -90,6 +90,7 @@ set modeline                    " Set the 'modeline' options if they are defined
 set pastetoggle=<F2>            " Mapping to take care of unsetting ai and
                                 " smartindent when pasting text.
 set foldcolumn=1                " This gives 2 character wide left margin.
+set modelineexpr                " When opening vim plugins that set modelines E992 error.
 
 
 " Make the up and down movements move by "display" lines:

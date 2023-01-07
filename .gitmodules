@@ -13,9 +13,6 @@
 [submodule "bundle/vim-vinegar"]
 	path = bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = https://github.com/inkarkat/vcscommand.vim.git
 [submodule "bundle/powerline"]
 	path = bundle/powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
@@ -24,7 +21,7 @@
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://tpope.io/vim/fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/unite"]
 	path = bundle/unite
 	url = https://github.com/Shougo/unite.vim.git
